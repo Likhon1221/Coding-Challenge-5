@@ -8,3 +8,7 @@ let inventory = [
 ]; // You need to click the array to see the data
 
 console.log(inventory);
+
+// Task 2. Create an Orders Array of Order Objects
+
+let orders = []
