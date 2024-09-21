@@ -43,3 +43,25 @@ function placeOrder(customerName, orderedItems) {
     }
     orders.push({customerName: customerName, items: orderedItems, status: "Pending"});
 }
+placeOrder('Alice', [
+    { name: 'Espresso', quantity: 3 },
+    { name: 'Mocha', quantity: 6 }
+    ]
+);
+
+// Task 4. Create a Function to Calculate Total for an Order
+
+function calculateOrderTotal(order) {
+    let sum = 0;
+    for (let i = 0; i < order.items.length; i++) {
+        let el = order.items[i];
+        sum += el.price * el.quantity;
+    }
+    return sum;
+}
+let aliceOrder = orders.find(order => order.customerName === 'Alice');
+if (aliceOrder) {
+    let total = calculateOrderTotal(aliceOrder);
+    console.log(`Total for Alice's order: $${total}`
+);
+    };
