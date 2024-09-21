@@ -80,3 +80,17 @@ function completeOrder(customerName) {
     console.log("Error order not found");
 };
 completeOrder('Alice');
+
+//Task 6. Create a Function to Check Pending Orders
+
+function checkPendingOrders() {
+    for (let i = 0; i < orders.length; i++) {
+        let el = orders[i];
+        if (el.status == "Pending") {
+            console.log(el);
+        return
+        }
+    }
+    console.log("No Pendings")
+};
+checkPendingOrders();
