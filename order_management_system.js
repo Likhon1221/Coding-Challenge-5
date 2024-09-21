@@ -65,3 +65,18 @@ if (aliceOrder) {
     console.log(`Total for Alice's order: $${total}`
 );
     };
+
+// Task 5. Create a Function to Mark an Order as Completed
+
+function completeOrder(customerName) {
+    for (let i = 0; i < orders.length; i++) {
+        let el = orders[i];
+        if (el.customerName == customerName) {
+            el.status = "Completed";
+            console.log("Completed!!!")
+            return;
+        }
+    }
+    console.log("Error order not found");
+};
+completeOrder('Alice');
